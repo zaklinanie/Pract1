@@ -66,8 +66,6 @@ function showGreeting() {
     alert(greeting);
 }
 
-
-// Функция для запуска вирусного текста
 function startVirus() {
     let message = document.getElementById('virusMessage');
     setInterval(() => {
@@ -102,7 +100,6 @@ function populateNumbers() {
     } while (i <= 40);
 }
 
-// Функция проверки числа
 function checkNumber() {
     let number = parseInt(document.getElementById('numberInput').value, 10);
     if (isNaN(number)) {
@@ -114,23 +111,18 @@ function checkNumber() {
     }
 }
 
-// Обработчики событий для кнопок и заполнение списков числами
 document.addEventListener('DOMContentLoaded', function() {
-    // Привязка функции приветствия к кнопке
+
     document.getElementById('btn-1').addEventListener('click', showGreeting);
 
-    // Привязка функции вирусного текста к кнопке
     document.getElementById('btn-3').addEventListener('click', startVirus);
 
-    // Привязка функции проверки числа к кнопке
     document.getElementById('btn-4').addEventListener('click', checkNumber);
 
     document.getElementById('btn-0').addEventListener('click', checkVariableType);
 
-    // Вызов функции для заполнения списков числами
     populateNumbers();
 
-    // Заполнение списка четными числами
     let evenNumbersList = document.getElementById('evenNumbers');
     for (let i = 8; i <= 20; i += 2) {
         let listItem = document.createElement('li');
@@ -138,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
         evenNumbersList.appendChild(listItem);
     }
 
-    // Заполнение списка нечетными числами
     let oddNumbersList = document.getElementById('oddNumbers');
     for (let i = 1; i <= 7; i += 2) {
         if (i === 5) continue; // Пропускаем число 5
